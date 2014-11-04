@@ -1,0 +1,15 @@
+<div class="row marketing" ng-controller="CustomerCtrl as customers">
+  <h3>Customers</h3>
+  <ul class="customerlist">
+  	<li ng-repeat="client in customers.clients" class="customer">
+  		<a ui-sref="customers.detail">
+	  		<div ng-click="customerDetail()">
+		  		<h4>{{ client.name }}</h4>
+		  		<div>{{ client.city }}</div>
+		  	</div>
+	  	</a>
+  	</li>
+  </ul>
+</div>
+
+<div ui-view></div>
