@@ -24,18 +24,30 @@
     <div class="container" ng-controller="MainCtrl as main">
       <div class="header">
         <ul class="nav nav-pills pull-right">
+                <!--
+
           <li ng-class="{ active:main.isSet(1) }"><a ui-sref="home" ng-click="main.setTab(1)">Home</a></li>
           <li ng-class="{ active:main.isSet(2) }"><a ui-sref="customers" ng-click="main.setTab(2)">Customers</a></li>
           <li ng-class="{ active:main.isSet(3) }"><a ui-sref="interactions" ng-click="main.setTab(3)">Interactions</a></li>
           <li ng-class="{ active:main.isSet(4) }"><a ui-sref="inventory" ng-click="main.setTab(4)">Inventory</a></li>
           <li ng-class="{ active:main.isSet(5) }"><a ui-sref="orders" ng-click="main.setTab(5)">Orders</a></li>
           <li ng-class="{ active:main.isSet(6) }"><a ui-sref="products" ng-click="main.setTab(6)">Products</a></li>
+-->
+          <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+          <li ui-sref-active="active"><a ui-sref="customers.list">Customers</a></li>
+          <li ui-sref-active="active"><a ui-sref="interactions">Interactions</a></li>
+          <li ui-sref-active="active"><a ui-sref="inventory">Inventory</a></li>
+          <li ui-sref-active="active"><a ui-sref="orders">Orders</a></li>
+          <li ui-sref-active="active"><a ui-sref="products">Products</a></li>
+
         </ul>
         <h3 class="text-muted">inventoryApp</h3>
       </div>
 
 <!--      <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div> -->
       <div ui-view></div>
+
+
       <div class="footer">
         <p>This is the footer</p>
       </div>

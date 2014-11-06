@@ -1,26 +1,26 @@
-<div class="row marketing" ng-controller="CustomerCtrl as customers">
-  <h3>Customer Detail</h3>
-	<h4>{{ client.name }}</h4>
-	<div>{{ client.address }}</div>
-	<div>{{ client.address2 }}</div>
-	<div>{{ client.city }}</div>
-	<div>{{ client.province }}</div>
-	<div>{{ client.country }}</div>
+<div class="row marketing">
+		<h4><a ui-sref="customers.list" >Back To Customer List</a></h4>
 
-	<div ng-repeat="contact in client.contacts">
-		<h5>{{ contact.name }}</h5>
-		<div>{{ contact.email }}</div>
-		<div>{{ contact.phone }}</div>
-		<div>{{ contact.phone_ext }}</div>
+  <h2>Customer Details</h2>
+	<h3> {{ customerdetail.customer.name }}</h3>
+	<div>Address: {{ customerdetail.customer.address }} {{ customerdetail.customer.address2 }}</div>
+	<div>{{ customerdetail.customer.city }}, {{ customerdetail.customer.province }}</div>
+	<div>Country: {{ customerdetail.customer.country }}</div>
+
+	<div ng-repeat="contact in customerdetail.customer.contacts">
+		<h4>Name: {{ contact.name }}</h4>
+		<div>Email: {{ contact.email }}</div>
+		<div>Phone: {{ contact.phone }}</div>
+		<div>Phone Ext: {{ contact.phone_ext }}</div>
 	</div>
 
 	<ul class="nav nav-pills">
-		<li><a ui-sref="home" ng-click="main.setTab(1)">Documents</a></li>
-		<li><a ui-sref="home" ng-click="main.setTab(1)">Orders</a></li>
-		<li><a ui-sref="home" ng-click="main.setTab(1)">Invoices</a></li>
-		<li><a ui-sref="home" ng-click="main.setTab(1)">Interactions</a></li>
+		<li><a ui-sref="customers.detail.document" ng-click="main.setTab(1)">Documents</a></li>
+		<li><a ui-sref="customers.detail.orders" ng-click="main.setTab(1)">Orders</a></li>
+		<li><a ui-sref="customers.detail.invoices" ng-click="main.setTab(1)">Invoices</a></li>
+		<li><a ui-sref="customers.detail.interactions" ng-click="main.setTab(1)">Interactions</a></li>
 	</ul>
 	
 	<div>This will have a list of Documents, Orders, Invoices and Interactions</div>
-
+	<div ui-view>
 </div>
