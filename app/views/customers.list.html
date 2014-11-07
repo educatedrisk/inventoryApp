@@ -1,14 +1,28 @@
 <div class="row marketing">
   <ul class="customerlist">
-  	<li ng-repeat="customer in customers.listofcustomers" class="customer">
-  		
-	  		<div>
-		  		<h4> 
+    <li ng-repeat="customer in customers.listofcustomers" class="customer">
+      
+        <div>
+          <h4> 
           <a ui-sref="customers.detail({id:customer.id})"> {{ customer.name }}</a>
           </h4>
-		  		<div>{{ customer.city + " " + customer.province }}</div>
-		  	</div>
-	  	
-  	</li>
+          <div>{{ customer.city + " " + customer.province }}</div>
+        </div>
+      
+    </li>
+  </ul>
+</div>
+<div class="row marketing">
+  <ul class="customerlist">
+    <li ng-repeat="customer in customers.list" class="customer">
+      
+        <div>
+          <h4> 
+          <a ui-sref="customers.detail({id:customer.id})"> {{ customer.name }}</a>
+          </h4>
+          <div>{{ customer.city + " " + customer.province }}</div>
+        </div>
+      
+    </li>
   </ul>
 </div>
