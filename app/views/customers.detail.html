@@ -1,7 +1,8 @@
 <div class="row marketing">
 		<h4><a ui-sref="customers.list" >Back To Customer List</a></h4>
 
-  <h2>Customer Details</h2>
+	<h3>customerid: {{ customerdetail.customerid }}</h3>
+	  <h2>Customer Details</h2>
 	<h3> {{ customerdetail.customer.name }}</h3>
 	<div>Address: {{ customerdetail.customer.address }} {{ customerdetail.customer.address2 }}</div>
 	<div>{{ customerdetail.customer.city }}, {{ customerdetail.customer.province }}</div>
@@ -24,3 +25,10 @@
 	<div>This will have a list of Documents, Orders, Invoices and Interactions</div>
 	<div ui-view>
 </div>
+
+customer name : {{ customerdetail.companies.id[customerdetail.customerid].name }}
+  <ul class="customerlist">
+    <li ng-repeat="customer in customerdetail.companies" class="customer">
+           {{ customer.name }} 
+    </li>
+  </ul>

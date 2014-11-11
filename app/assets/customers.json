@@ -1,88 +1,86 @@
-{
-	"customers": [
+[
 
+	{
+		"id" : 1, 
+		"name" : "Adbarcode", 
+		"address" : "1232 Main Street W.",
+		"address2" : "unit 2",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [
 			{
-				"id" : 1, 
-				"name" : "Adbarcode", 
-				"address" : "1232 Main Street W.",
-				"address2" : "unit 2",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [
-					{
-						"contact_name": "John Smith", 
-						"email": "johnsmith@hotmail.com",
-						"phone": "905-525-4568",
-						"phone_ext": "324"
-					},
-					{ 
-						"contact_name": "Sally Johnson", 
-						"email": "sallyjohnson@hotmail.com",
-						"phone": "905-525-1111",
-						"phone_ext": "224"
-					}
-				]
+				"contact_name": "John Smith", 
+				"email": "johnsmith@hotmail.com",
+				"phone": "905-525-4568",
+				"phone_ext": "324"
 			},
-			{
-				"id" : 2, 
-				"name" : "John Lepore Foods", 
-				"address" : "1232 James St.",
-				"address2" : "unit 454",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [ ]
-			},
-			{
-				"id" : 3, 
-				"name" : "Zarky Fine Foods", 
-				"address" : "1232 James St.",
-				"address2" : "unit 454",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [ ]
-			},
-			{
-				"id" : 4, 
-				"name" : "RPR Environmental", 
-				"address" : "1232 James St.",
-				"address2" : "unit 454",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [ ]
-			},
-			{
-				"id" : 5, 
-				"name" : "Bartek Ingredients",
-				"address" : "1232 James St.",
-				"address2" : "unit 454",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [ ]
-			},
-			{
-				"id" : 6, 
-				"name" : "Gen Pack", 
-				"address" : "1232 James St.",
-				"address2" : "unit 454",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [ ]
-			},
-			{
-				"id" : 7, 
-				"name" : "P & F Meat Products",
-				"address" : "1232 James St.",
-				"address2" : "unit 454",
-				"city" : "Hamilton",
-				"province" : "Ontario",
-				"country" : "Canada",
-				"contacts" : [ ]
+			{ 
+				"contact_name": "Sally Johnson", 
+				"email": "sallyjohnson@hotmail.com",
+				"phone": "905-525-1111",
+				"phone_ext": "224"
 			}
 		]
-}
+	},
+	{
+		"id" : 2, 
+		"name" : "John Lepore Foods", 
+		"address" : "1232 James St.",
+		"address2" : "unit 454",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [ ]
+	},
+	{
+		"id" : 3, 
+		"name" : "Zarky Fine Foods", 
+		"address" : "1232 James St.",
+		"address2" : "unit 454",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [ ]
+	},
+	{
+		"id" : 4, 
+		"name" : "RPR Environmental", 
+		"address" : "1232 James St.",
+		"address2" : "unit 454",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [ ]
+	},
+	{
+		"id" : 5, 
+		"name" : "Bartek Ingredients",
+		"address" : "1232 James St.",
+		"address2" : "unit 454",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [ ]
+	},
+	{
+		"id" : 6, 
+		"name" : "Gen Pack", 
+		"address" : "1232 James St.",
+		"address2" : "unit 454",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [ ]
+	},
+	{
+		"id" : 7, 
+		"name" : "P & F Meat Products",
+		"address" : "1232 James St.",
+		"address2" : "unit 454",
+		"city" : "Hamilton",
+		"province" : "Ontario",
+		"country" : "Canada",
+		"contacts" : [ ]
+	}
+]

@@ -67,7 +67,83 @@ var inventoryApp = angular.module('inventoryApp', [
 
 
 	}]);
-	
+
+
+	inventoryApp.factory('CustomerFactory',	function CustomerFactory ($http) {
+			var path = 'assets/customers.json';
+	 	 	CustomerFactory.customers = [];
+
+
+		  CustomerFactory.getCustomers = function () {
+		    return $http.get(path)
+		    .success(function (data) {
+		      // magic line, we resolve the data IN the factory!
+		      CustomerFactory.customers = data;
+		    })
+		    .error(function () {
+		      console.log('cannot get customers');
+		    });
+
+	  };
+
+		   CustomerFactory.getCustomer = function(id) {
+		      var i;
+		      var customers = CustomerFactory.getCustomers();
+		      for (i in customers){
+			      	if (customers[i].id == id){
+			      		CustomerFactory.customer = customers[i];
+			      	}
+		      }
+		      return CustomerFactory.customer;
+		};
+
+	  return CustomerFactory;
+	});
+
+
+
+	inventoryApp.controller('CustomerCtrl', function CustomerCtrl (CustomerFactory){
+		var vm = this;
+		//vm.companies = CustomerFactory.customers;
+
+		CustomerFactory.getCustomers()
+		    .then(function () {
+			    vm.companies = CustomerFactory.customers;
+		});
+
+	})
+
+	inventoryApp.controller('CustomerDetailCtrl', ['$stateParams','CustomerFactory','$filter', function CustomerDetailCtrl ($stateParams, CustomerFactory, $filter){
+		var vm = this; 
+		vm.customerid = $stateParams.id;
+		var customerid = vm.customerid;
+
+		CustomerFactory.getCustomers()
+		    .then(function () {
+			    vm.companies = CustomerFactory.customers;
+		});
+
+		vm.customer = CustomerFactory.getCustomer(customerid);
+
+//vm.customer = vm.companies[0];
+//		vm.customer = $filter('filter')(vm.companies, { id:vm.customerid})[0];
+		/*
+		vm.customer = vm.companies[vm.customerid];
+*/
+		/*
+		var customeridid = $stateParams.id;
+
+		vm.customeridid = function (customeridid){
+			CustomerFactory.getCustomer(customeridid);
+		};
+*/
+//		vm.customeridid = CustomerFactory.getCustomer(vm.customerid);
+		
+	}])
+
+
+
+/*	
 inventoryApp.service('CustomerService', ['$http', function ($http) {
 	    
 	    var uid = 1; //to create unique customer id
@@ -96,15 +172,8 @@ inventoryApp.service('CustomerService', ['$http', function ($http) {
 
 	}]);
 
-	inventoryApp.controller('CustomerDetailCtrl', ['$stateParams','CustomerService', function($stateParams, CustomerService){
-		this.customerid = $stateParams.id;
-		this.customer = CustomerService.get(this.customerid);
-		
-	}])
+*/
 
-	inventoryApp.controller('CustomerCtrl', function(CustomerService){
-		this.listofcustomers = CustomerService.list();
-	})
 
 
 /* 
